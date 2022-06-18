@@ -1,0 +1,2 @@
+BeautifulSoup4
+line-bot-sdk==2.3.0
