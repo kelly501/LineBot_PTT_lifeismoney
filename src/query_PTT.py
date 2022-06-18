@@ -28,10 +28,10 @@ if __name__ == '__main__':
     print(result)
 
     LINE_UUID = os.environ['LINE_UUID']
-  TOKEN = os.environ['TOKEN']
+    TOKEN = os.environ['TOKEN']
 
-  line_uuid = LINE_UUID
-  line_bot_api = LineBotApi(TOKEN)
-  line_bot_api.push_message(
-      line_uuid,
-      TextSendMessage(text=result))
+    line_uuid = LINE_UUID
+    line_bot_api = LineBotApi(TOKEN)
+    line_bot_api.push_message(
+        line_uuid,
+        TextSendMessage(text=result))
