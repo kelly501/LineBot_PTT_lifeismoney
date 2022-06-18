@@ -5,7 +5,7 @@ from linebot.models import TextSendMessage
 import os
 
 LINE_UUID = os.environ['LINE_UUID']
-TOKEN = os.environ['TOKEN']
+#TOKEN = os.environ['TOKEN']
 
 r = requests.get('https://www.ptt.cc/bbs/Lifeismoney/index.html', timeout=2)
 soup = BeautifulSoup(r.text, "html.parser")  # 解析器
