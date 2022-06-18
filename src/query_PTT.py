@@ -1,4 +1,4 @@
-import requests
+import requests as requests
 from bs4 import BeautifulSoup
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
@@ -26,10 +26,8 @@ if __name__ == '__main__':
         href = href + link['href']
         result = result + link.text + "\n" + "ptt.cc" + link['href'] + "\n"
 
-    LINE_UUID = os.environ['LINE_UUID']
-    TOKEN = os.environ['TOKEN']
-    line_uuid = LINE_UUID
-    line_bot_api = LineBotApi(TOKEN)
-    line_bot_api.push_message(
-        line_uuid,
-        TextSendMessage(text=result))
+line_uuid = LINE_UUID
+line_bot_api = LineBotApi(TOKEN)
+line_bot_api.push_message(
+    line_uuid,
+    TextSendMessage(text=result))
