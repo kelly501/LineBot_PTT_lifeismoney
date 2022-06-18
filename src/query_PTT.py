@@ -25,11 +25,9 @@ if __name__ == '__main__':
         title = title + link.text
         href = href + link['href']
         result = result + link.text + "\n" + "ptt.cc" + link['href'] + "\n"
-    print(result)
 
     LINE_UUID = os.environ['LINE_UUID']
     TOKEN = os.environ['TOKEN']
-
     line_uuid = LINE_UUID
     line_bot_api = LineBotApi(TOKEN)
     line_bot_api.push_message(
